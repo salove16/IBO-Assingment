@@ -93,6 +93,14 @@ listOfProducts.map((e)=>{
 if(UniqueProduct[e.productName]==undefined){
 UniqueProduct[e.productName]=1
 listUniquePrducts.push(e)
+}else{
+    UniqueProduct[e.productName]+=1
+    listUniquePrducts.map((el)=>{
+        if(e.productName==el.productName){
+            el.quantity+=e.quantity
+        }
+    })
+
 }
 })
 console.log(listUniquePrducts)
