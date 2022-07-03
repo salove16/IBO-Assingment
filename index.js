@@ -72,30 +72,30 @@ const listOfProducts = [{
 
 
 const getUniqueProductCount=(listOfProducts)=>{
-let obj={}
+let listUniqueProductCount={}
 listOfProducts.map((e)=>{
-if(obj[e.productName]==undefined){
-obj[e.productName]=1
+if(listUniqueProductCount[e.productName]==undefined){
+listUniqueProductCount[e.productName]=1
 }
 else{
-obj[e.productName]+=1
+listUniqueProductCount[e.productName]+=1
 }
 })
-console.log(obj)
+console.log(listUniqueProductCount)
 }
 getUniqueProductCount(listOfProducts)
 
 
 const getUniquePrducts=(listOfProducts)=>{
-let obj1={}
-let array=[]
+let UniqueProduct={}
+let listUniquePrducts=[]
 listOfProducts.map((e)=>{
-if(obj1[e.productName]==undefined){
-obj1[e.productName]=1
-array.push(e)
+if(UniqueProduct[e.productName]==undefined){
+UniqueProduct[e.productName]=1
+listUniquePrducts.push(e)
 }
 })
-console.log(array)
+console.log(listUniquePrducts)
 }
 
 getUniquePrducts(listOfProducts)
